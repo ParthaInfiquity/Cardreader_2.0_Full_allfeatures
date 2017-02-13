@@ -16,6 +16,7 @@ MFRC522.obj: C:/ti/CC3200SDK_1.2.0/cc3200-sdk/driverlib/prcm.h
 MFRC522.obj: C:/ti/CC3200SDK_1.2.0/cc3200-sdk/driverlib/gpio.h
 MFRC522.obj: C:/ti/CC3200SDK_1.2.0/cc3200-sdk/driverlib/uart.h
 MFRC522.obj: C:/ti/CC3200SDK_1.2.0/cc3200-sdk/driverlib/interrupt.h
+MFRC522.obj: C:/ti/CC3200SDK_1.2.0/cc3200-sdk/example/common/common.h
 MFRC522.obj: C:/ti/CC3200SDK_1.2.0/cc3200-sdk/example/common/uart_if.h
 MFRC522.obj: ../pinmux.h
 MFRC522.obj: C:/ti/CC3200SDK_1.2.0/cc3200-sdk/simplelink/include/simplelink.h
@@ -39,6 +40,13 @@ MFRC522.obj: ../MFRC522.h
 MFRC522.obj: ../lcd.h
 MFRC522.obj: C:/ti/CC3200SDK_1.2.0/cc3200-sdk/driverlib/timer.h
 MFRC522.obj: C:/ti/CC3200SDK_1.2.0/cc3200-sdk/example/common/timer_if.h
+MFRC522.obj: C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include/stdbool.h
+MFRC522.obj: ../button_if.h
+MFRC522.obj: C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include/stdlib.h
+MFRC522.obj: ../Melody.h
+MFRC522.obj: ../wdt_if.h
+MFRC522.obj: C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include/stdio.h
+MFRC522.obj: C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include/stdarg.h
 
 ../MFRC522.c: 
 C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include/string.h: 
@@ -56,6 +64,7 @@ C:/ti/CC3200SDK_1.2.0/cc3200-sdk/driverlib/prcm.h:
 C:/ti/CC3200SDK_1.2.0/cc3200-sdk/driverlib/gpio.h: 
 C:/ti/CC3200SDK_1.2.0/cc3200-sdk/driverlib/uart.h: 
 C:/ti/CC3200SDK_1.2.0/cc3200-sdk/driverlib/interrupt.h: 
+C:/ti/CC3200SDK_1.2.0/cc3200-sdk/example/common/common.h: 
 C:/ti/CC3200SDK_1.2.0/cc3200-sdk/example/common/uart_if.h: 
 ../pinmux.h: 
 C:/ti/CC3200SDK_1.2.0/cc3200-sdk/simplelink/include/simplelink.h: 
@@ -79,3 +88,10 @@ C:/ti/CC3200SDK_1.2.0/cc3200-sdk/example/common/gpio_if.h:
 ../lcd.h: 
 C:/ti/CC3200SDK_1.2.0/cc3200-sdk/driverlib/timer.h: 
 C:/ti/CC3200SDK_1.2.0/cc3200-sdk/example/common/timer_if.h: 
+C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include/stdbool.h: 
+../button_if.h: 
+C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include/stdlib.h: 
+../Melody.h: 
+../wdt_if.h: 
+C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include/stdio.h: 
+C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include/stdarg.h: 

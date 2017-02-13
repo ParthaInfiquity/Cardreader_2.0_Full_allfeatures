@@ -10,8 +10,11 @@ GEN_OPTS__FLAG :=
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
+"./Fileio.obj" \
 "./HttpFile.obj" \
 "./MFRC522.obj" \
+"./Melody.obj" \
+"./button_if.obj" \
 "./gpio_if.obj" \
 "./i2c_if.obj" \
 "./lcd.obj" \
@@ -20,6 +23,7 @@ ORDERED_OBJS += \
 "./startup_ccs.obj" \
 "./timer_if.obj" \
 "./uart_if.obj" \
+"./wdt_if.obj" \
 "../cc3200v1p32.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
@@ -167,8 +171,8 @@ CardReader.bin: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)$(BIN_OUTPUTS__QUOTED)
-	-$(RM) "HttpFile.d" "MFRC522.d" "gpio_if.d" "i2c_if.d" "lcd.d" "network_common.d" "pinmux.d" "startup_ccs.d" "timer_if.d" "uart_if.d" 
-	-$(RM) "HttpFile.obj" "MFRC522.obj" "gpio_if.obj" "i2c_if.obj" "lcd.obj" "network_common.obj" "pinmux.obj" "startup_ccs.obj" "timer_if.obj" "uart_if.obj" 
+	-$(RM) "Fileio.d" "HttpFile.d" "MFRC522.d" "Melody.d" "button_if.d" "gpio_if.d" "i2c_if.d" "lcd.d" "network_common.d" "pinmux.d" "startup_ccs.d" "timer_if.d" "uart_if.d" "wdt_if.d" 
+	-$(RM) "Fileio.obj" "HttpFile.obj" "MFRC522.obj" "Melody.obj" "button_if.obj" "gpio_if.obj" "i2c_if.obj" "lcd.obj" "network_common.obj" "pinmux.obj" "startup_ccs.obj" "timer_if.obj" "uart_if.obj" "wdt_if.obj" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

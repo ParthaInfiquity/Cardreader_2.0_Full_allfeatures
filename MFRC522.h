@@ -44,6 +44,23 @@ void PICC_DumpToSerial(Uid *uid);
 
 //Http functions
 
-void CallHttpPost();
+short CallHttpPost(unsigned char request);
+short CallHttpGet(unsigned char request); //When using Brijenders Changes
 int APConnectInit();
+double GetOBjJSON(char *ptr  , unsigned char opt);
+int FileIo(int wrtflg, char *SSID, char *PWD);
+extern void ConnectToRouter(void);
+extern void SlStop(void);
+
+typedef enum{
+	GET_CREDIT_TO_PLAY,
+	CURRENT_CREDIT_BAL,
+	FREEPLAY_FLAG,
+	CURRENT_TICKET_BAL,
+	CANPLAY_FLAG,
+	TICKET_MULTIPLIER,
+	UPDATED_TICKET_BALANCE,
+	TRANSACTION_ID,
+	SSID_PWD,
+}JSON_OBJ;
 #endif					

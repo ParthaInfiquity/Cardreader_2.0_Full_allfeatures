@@ -21,7 +21,7 @@
 #define LCD_SETDDRAMADDR        0x80
 #define LCD_LINE_ONE            0x80
 #define LCD_LINE_TWO            0xC0
-
+#define CURSOR_LEFT             0x10
 #define LCD_TWO_LINE_PIXEL_4BIT   0x28
 // flags for display entry mode
 // ---------------------------------------------------------------------------
@@ -114,6 +114,9 @@ void LCDSelectLine(unsigned char);
 void increment_cursor(unsigned char);
 void LCDClear();
 void number(int n);
+void PrintFloat(double);
+void print_num(int );
+void moveCursorLeft(int);
 #endif /* LCD_H_ */
 
 

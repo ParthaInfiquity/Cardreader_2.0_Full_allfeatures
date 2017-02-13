@@ -18,7 +18,8 @@
 
 #define LCD_NOBACKLIGHT 0x00
 #define LCD_BACKLIGHT   0xFF
-#define I2CBACKPACK_DEV_ADDR    0x27
+#define I2CBACKPACK_DEV_ADDR    0x3F
+//#define I2CBACKPACK_DEV_ADDR    0x27
 #define I2CBACKPCK_WRITE_LEN    1
 #define I2CBACKPACK_STOP_BIT    1
 #define LCD_WRITE_SUCCESS       1
@@ -69,6 +70,7 @@ void lcd_init(void)
    send_lcd((unsigned char)RESET_CMD , COMMAND);
    send_lcd((unsigned char)RESET_CMD , COMMAND);
    send_lcd((unsigned char)LCD_RETURNHOME , COMMAND); //return home
+   __delay_cycles(160000);        // 2ms delay
    send_lcd((unsigned char)LCD_TWO_LINE_PIXEL_4BIT  , COMMAND);//4 bit 5*7 2 line lcd command
 
    send_lcd((unsigned char)LCD_CURSORON_DISPLAYON , COMMAND); // display on & cursor visible
@@ -178,7 +180,7 @@ void SetBacklightPin(unsigned char value )
 void pulse_enable(unsigned char data)
 {
 	writeI2CLCD(data | EN_HIGH);   // set enable bit
-    __delay_cycles(1000000);
+    __delay_cycles(160000);        // 2ms delay
 	writeI2CLCD(data & ~EN_HIGH);  // reset enable bit
 }
 
@@ -204,6 +206,7 @@ void LCDSelectLine(unsigned char y)
 void LCDClear()
 {
 	send_lcd((unsigned char)LCD_CLEARDISPLAY , COMMAND);
+	__delay_cycles(160000);        // 2ms delay
 }
 
 void increment_cursor(unsigned char count)
@@ -229,4 +232,32 @@ void number(int n)
         }
 
         print(arr);
+}
+void print_num(int n)
+{
+	char arr[10];
+	int j=0;
+	         while(n>0)
+	         {
+	                 arr[j++]=n%10;
+	                 n=n/10;
+	         }
+	         for(--j;j>=0;j--)
+	        	 send_lcd((arr[j]+48) , DATA);
+}
+void PrintFloat(double n)
+{
+	int num = (int)n ;
+	float diffValue;
+	print_num(num);
+	send_lcd('.' , DATA);
+	 diffValue = n - (float)num;
+	 print_num(diffValue*100);
+}
+
+void moveCursorLeft(int number)
+{
+	int i=0;
+	while(i<number)
+		send_lcd(LCD_CURSORSHIFT | LCD_CURSORMOVE | LCD_MOVELEFT,COMMAND);
 }

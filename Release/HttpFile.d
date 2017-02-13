@@ -45,8 +45,11 @@ HttpFile.obj: C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include/string.h
 HttpFile.obj: C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include/stdlib.h
 HttpFile.obj: C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include/assert.h
 HttpFile.obj: C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include/stdarg.h
+HttpFile.obj: ../lcd.h
 HttpFile.obj: C:/ti/CC3200SDK_1.2.0/cc3200-sdk/netapps/json/jsmn.h
 HttpFile.obj: C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include/stddef.h
+HttpFile.obj: C:/ti/CC3200SDK_1.2.0/cc3200-sdk/netapps/json/json.h
+HttpFile.obj: ../MFRC522.h
 
 ../HttpFile.c: 
 C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include/string.h: 
@@ -93,5 +96,8 @@ C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include/string.h:
 C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include/stdlib.h: 
 C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include/assert.h: 
 C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include/stdarg.h: 
+../lcd.h: 
 C:/ti/CC3200SDK_1.2.0/cc3200-sdk/netapps/json/jsmn.h: 
 C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include/stddef.h: 
+C:/ti/CC3200SDK_1.2.0/cc3200-sdk/netapps/json/json.h: 
+../MFRC522.h: 

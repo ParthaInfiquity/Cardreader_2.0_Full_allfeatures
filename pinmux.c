@@ -89,10 +89,34 @@ PinMuxConfig(void)
     MAP_PinTypeGPIO(PIN_62, PIN_MODE_0, false);
     MAP_GPIODirModeSet(GPIOA0_BASE, 0x80, GPIO_DIR_MODE_OUT);
 
-    // Configure PIN_64 for GPIO Output				GPIO where ticketing pulse is generated
+    // Configure PIN_64 for GPIO Output				//GPIO where ticketing pulse is generated
     //
     MAP_PinTypeGPIO(PIN_64, PIN_MODE_0, false);
     MAP_GPIODirModeSet(GPIOA1_BASE, 0x2, GPIO_DIR_MODE_OUT);
+
+    //
+    // Configure PIN_50 for GPIO Output				//GPIO for LCD Backlight
+    //
+    MAP_PinTypeGPIO(PIN_50, PIN_MODE_0, false);
+    MAP_GPIODirModeSet(GPIOA0_BASE, 0x1, GPIO_DIR_MODE_OUT);
+
+    //
+    // Configure PIN_53 for GPIO Output				//GPIO for LCD Power
+    //
+    MAP_PinTypeGPIO(PIN_53, PIN_MODE_0, false);
+    MAP_GPIODirModeSet(GPIOA3_BASE, 0x40, GPIO_DIR_MODE_OUT);
+
+    //
+    // Configure PIN_61 for GPIO Input				//GPIO for LED
+    //
+    MAP_PinTypeGPIO(PIN_61, PIN_MODE_0, false);
+    MAP_GPIODirModeSet(GPIOA0_BASE, 0x40, GPIO_DIR_MODE_OUT);
+
+    //
+    // Configure PIN_63 for GPIO Input				//GPIO for RFID power
+    //
+    MAP_PinTypeGPIO(PIN_63, PIN_MODE_0, false);
+    MAP_GPIODirModeSet(GPIOA1_BASE, 0x1, GPIO_DIR_MODE_OUT);
 
     //
     // Configure PIN_55 for UART0 UART0_TX
