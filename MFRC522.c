@@ -668,8 +668,9 @@ void PCD_Init()
 {
         // Set the resetPowerDownPin as digital output, do not reset or power down.
   
-  //      if (digitalRead(_resetPowerDownPin) == LOW)
-        if (GPIO_IF_Get(28, GPIOA3_BASE, GPIO_PIN_4))
+  	GPIO_IF_Set(28, GPIOA3_BASE, GPIO_PIN_4,0);
+	delay(5);
+        if (!GPIO_IF_Get(28, GPIOA3_BASE, GPIO_PIN_4))
         { //The MFRC522 chip is in power down mode.
                // digitalWrite(_resetPowerDownPin, HIGH);   // Exit power down mode. This triggers a hard reset.
                 GPIO_IF_Set(28, GPIOA3_BASE, GPIO_PIN_4,1);
